@@ -22,12 +22,13 @@ class UserServiceMorningBatchApplicationTests {
     void contextLoads() {
     }
 
+    //Run this to help insert a sample client record
     @Test
     @Commit
     void storeRegisteredClientInDB() {
         RegisteredClient oidcClient = RegisteredClient.withId(UUID.randomUUID().toString())
                 .clientId("oidc-client")
-                .clientSecret("{noop}secret")
+                .clientSecret("$2a$12$WMqFkcuZu6HoRVrCC6FwOum.t/TrCTDCInP0Xe28uD15pv2JJ/G/m") //bcrypt encoded password for "secret"
                 .clientAuthenticationMethod(ClientAuthenticationMethod.CLIENT_SECRET_BASIC)
                 .authorizationGrantType(AuthorizationGrantType.AUTHORIZATION_CODE)
                 .authorizationGrantType(AuthorizationGrantType.REFRESH_TOKEN)

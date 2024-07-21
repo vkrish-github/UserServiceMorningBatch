@@ -84,7 +84,7 @@ public class SecurityConfig {
     public UserDetailsService userDetailsService() {
         UserDetails userDetails = User.builder()
                 .username("user")
-                .password("$2a$12$RZMvq8FvSzYZ9LZnNZQ0du5A0/ItBquQMkocuKJlF20QobiE1sNoq")
+                .password("$2a$12$RZMvq8FvSzYZ9LZnNZQ0du5A0/ItBquQMkocuKJlF20QobiE1sNoq") //bcrypt encrypted value of "password"
                 .roles("USER")
                 .build();
 

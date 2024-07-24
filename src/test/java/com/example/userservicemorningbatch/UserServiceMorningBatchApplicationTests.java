@@ -22,26 +22,26 @@ class UserServiceMorningBatchApplicationTests {
     void contextLoads() {
     }
 
-//    @Test
-//    @Commit
-//    void storeRegisteredClientInDB() {
-//        RegisteredClient oidcClient = RegisteredClient.withId(UUID.randomUUID().toString())
-//                .clientId("oidc-client")
-//                .clientSecret("$2a$12$y/UcEklUz4D2OAM1jplV5e0evGzp0NqeZhdWfD8Pxz7cO5xk7rPjS")
-//                .clientAuthenticationMethod(ClientAuthenticationMethod.CLIENT_SECRET_BASIC)
-//                .authorizationGrantType(AuthorizationGrantType.AUTHORIZATION_CODE)
-//                .authorizationGrantType(AuthorizationGrantType.REFRESH_TOKEN)
-//                .redirectUri("https://oauth.pstmn.io/v1/callback")
-//                .postLogoutRedirectUri("https://oauth.pstmn.io/v1/callback")
-//                .scope(OidcScopes.OPENID) // Roles
-//                .scope(OidcScopes.PROFILE)
-//                .scope("ADMIN")
-////                .scope("MENTOR")
-////                .scope("TA")
-//                .clientSettings(ClientSettings.builder().requireAuthorizationConsent(true).build())
-//                .build();
-//
-//        jpaRegisteredClientRepository.save(oidcClient);
-//    }
+    @Test
+    @Commit
+    void storeRegisteredClientInDB() {
+        RegisteredClient oidcClient = RegisteredClient.withId(UUID.randomUUID().toString())
+                .clientId("oidc-client")
+                .clientSecret("$2a$12$y/UcEklUz4D2OAM1jplV5e0evGzp0NqeZhdWfD8Pxz7cO5xk7rPjS")
+                .clientAuthenticationMethod(ClientAuthenticationMethod.CLIENT_SECRET_BASIC)
+                .authorizationGrantType(AuthorizationGrantType.AUTHORIZATION_CODE)
+                .authorizationGrantType(AuthorizationGrantType.REFRESH_TOKEN)
+                .redirectUri("https://oauth.pstmn.io/v1/callback")
+                .postLogoutRedirectUri("https://oauth.pstmn.io/v1/callback")
+                .scope(OidcScopes.OPENID) // Roles
+                .scope(OidcScopes.PROFILE)
+                .scope("ADMIN")
+//                .scope("MENTOR")
+//                .scope("TA")
+                .clientSettings(ClientSettings.builder().requireAuthorizationConsent(true).build())
+                .build();
+
+        jpaRegisteredClientRepository.save(oidcClient);
+    }
 
 }

@@ -10,6 +10,8 @@ import org.springframework.stereotype.Service;
 
 import java.util.Optional;
 
+
+//@Service annotation is important.
 @Service
 public class CustomUserDetailsService implements UserDetailsService  {
     private UserRepository userRepository;
